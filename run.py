@@ -44,7 +44,7 @@ def send_email(sender, password, recipient, subject, body, email_name):
                 server.login(sender, password)
                 
                 # Create personalized link without encoding
-                personalized_link = f"{BASE_URL}{recipient}"
+                personalized_link = f"<a href='{BASE_URL}{recipient}'>PDF</a>"
                 personalized_body = f"{body}\n\n {personalized_link}"
                 
                 # Create the email
